@@ -1,0 +1,34 @@
+web:
+    container_name: laravel_docker
+    image: hitalos/laravel:latest
+    ports:
+        - 800:80
+    volumes:
+        - ./:/var/www
+#     links:
+#         - db:database
+#     environment:
+#         DB_HOST: database
+#         DB_USER: admin
+#         DB_PASSWORD: root
+#         DB_DATABASE: smart
+
+# db:
+#   container_name: mysql_docker
+#   image: mysql:5.7
+#   volumes:
+#     - ./mysql:/var/lib/mysql
+#   environment:
+#     MYSQL_USER: admin
+#     MYSQL_DATABASE: smart
+#     MYSQL_PASSWORD: admin
+#     MYSQL_ROOT_PASSWORD: root
+#   ports:
+#     - "8560:3306"
+
+# composer:
+#   container_name: composer_docker
+#   image: composer
+#   volumes:
+#     - ./backend:/app
+#   command: .
