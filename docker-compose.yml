@@ -26,9 +26,9 @@ db:
   ports:
     - "8560:3306"
 
-# composer:
-#   container_name: composer_docker
-#   image: composer
-#   volumes:
-#     - ./backend:/app
-#   command: .
+composer:
+  container_name: composer_docker
+  image: composer
+  volumes:
+    - ./:/app
+  command: .
