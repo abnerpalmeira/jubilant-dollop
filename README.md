@@ -59,6 +59,8 @@ To ensure that the constraints are being followed, I designed three algorithms t
 
 The occupied seats are stored in the database as integer values, I decided to store them in this way, to make the coding easier, since I could convert them to an airplane seat notation just using arithmetic operations. I also use these integers to create a matrix that represents the plane map.
 
+I created a json file called config.json, in this file you can adjust the airplane dimensions.
+
 ### Possible enhancements
 
 Right now the system only work with airplanes that has only one aisle. A good improvement would be to prepare the code to allow multiple aisle.
