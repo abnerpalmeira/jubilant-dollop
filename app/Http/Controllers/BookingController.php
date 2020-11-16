@@ -31,7 +31,6 @@ class BookingController extends Controller
 
         foreach ($result as $value)
         {
-
             $booking = Booking::create(['position' => $value, 'client_id' => $client->id]);
 
             $booking->save();
@@ -41,6 +40,17 @@ class BookingController extends Controller
 
         return response()
             ->json($airplane->numbersToAirplaneNotation($result) , 200);
+    }
+
+    public function flush()
+    {
+    	DB::statement("SET foreign_key_checks=0");
+    	Booking::truncate();
+    	Client::truncate();
+    	DB::statement("SET foreign_key_checks=1");
+
+    	return response()
+            ->json('Success' , 200);
     }
 
 }

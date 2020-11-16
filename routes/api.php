@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('book', 'BookingController@book');
+Route::post('flush', 'BookingController@flush');
